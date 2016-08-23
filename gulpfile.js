@@ -14,7 +14,13 @@ var paths = {
     js: './src/js/**/*.js'
 }
 
-gulp.task('autoprefixer', function () {
+gulp.task('sass', function () {
+    return gulp.src(paths.sass)
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./src/css-unprefixed'));
+});
+
+gulp.task('autoprefixer', ['sass'], function () {
     return gulp.src('./src/css-unprefixed/*.css')
         .pipe(sourcemaps.init())
         .pipe(postcss([autoprefixer({
@@ -33,16 +39,12 @@ gulp.task('autoprefixer', function () {
         .pipe(gulp.dest('./SITE/css'));
 });
 
+gulp.task('compileCss', ['sass', 'autoprefixer']);
+
 gulp.task('minjs', function () {
     return gulp.src('./src/js/*.js')
         .pipe(uglify())
         .pipe(gulp.dest('./SITE/js'));
-});
-
-gulp.task('sass', function () {
-    return gulp.src(paths.sass)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./src/css-unprefixed'));
 });
 
 gulp.task('pug', function (done) {
@@ -52,7 +54,16 @@ gulp.task('pug', function (done) {
         .on('end', done);
 });
 
-gulp.task('webserver', function () {
+gulp.task('watch', function () {
+    gulp.watch(paths.sass, ['sass']);
+    gulp.watch(paths.pug, ['pug']);
+    gulp.watch('./src/css-unprefixed/**/*.css', ['autoprefixer'])
+    gulp.watch(paths.js, ['minjs']);
+});
+
+gulp.task('build', ['watch', 'pug', 'compileCss', 'minjs']);
+
+gulp.task('webserver', ['build'], function () {
     gulp.src('SITE')
         .pipe(webserver({
             livereload: true,
@@ -62,11 +73,4 @@ gulp.task('webserver', function () {
         }));
 });
 
-gulp.task('watch', function () {
-    gulp.watch(paths.sass, ['sass']);
-    gulp.watch(paths.pug, ['pug']);
-    gulp.watch('./src/css-unprefixed/**/*.css', ['autoprefixer'])
-    gulp.watch(paths.js, ['minjs']);
-});
-
-gulp.task('default', ['watch', 'pug', 'sass', 'minjs', 'autoprefixer', 'webserver']);
+gulp.task('default', ['webserver']);

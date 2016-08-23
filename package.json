@@ -8,6 +8,10 @@
   },
   "author": "alphahelix00",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alphahelix00/gulp-boost-ps"
+  },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "gulp": "^3.9.1",
