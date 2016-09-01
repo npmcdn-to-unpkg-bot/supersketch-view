@@ -1,10 +1,16 @@
 $(document).ready(function() {
     // Set up hamburger
     var $hamburger = $(".hamburger");
-    $hamburger.on("focusin", function(e) {
-        $hamburger.addClass("is-active");
+    $hamburger.click(function(e) {
+        e.preventDefault();
+        if ($hamburger.hasClass("is-active")) {
+            $hamburger.removeClass("is-active");
+        } else {
+            $hamburger.addClass("is-active");
+        }
     });
     $hamburger.on("focusout", function(e) {
+        e.preventDefault();
         $hamburger.removeClass("is-active");
     });
 

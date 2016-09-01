@@ -86,6 +86,23 @@ a.brand-logo {
     width: 120px;
 }
 
+#nav-dropdown {
+    margin-top: 56px;
+    width: 160px !important;
+    li a span {
+        display: block;
+        margin-left: 24px;
+        padding-left: 1em;
+    }
+    .fa {
+        position: absolute;
+        text-align: center;
+        width: 24px;
+        height: 24px;
+        font-size: 1.5em;
+    }
+}
+
 @media only screen and (min-height: 600px) {
     #info .row.center.login-div {
         margin-top: 5em;
@@ -96,6 +113,10 @@ a.brand-logo {
     a.brand-logo.left {
         left: 0;
         margin-left: 15px;
+    }
+
+    #nav-dropdown {
+        margin-top: 64px;
     }
 
     nav ul .btn-flat.dd-nav-buttons {
