@@ -13,7 +13,8 @@ var paths = {
     pug: './src/pug/**/*.pug',
     js: './src/js/**/*.js',
     fonts: './src/fonts/**/*.{ttf,woff,woff2,eof,eot,svg}',
-    images: './src/imgs/**/*.{svg,png,jpg,jpeg,gif}'
+    images: './src/imgs/**/*.{svg,png,jpg,jpeg,gif}',
+    css: './src/copycss/**/*.css'
 }
 
 gulp.task('sass', function () {
@@ -65,15 +66,20 @@ gulp.task('watch', function () {
 
 gulp.task('copyfonts', function() {
     gulp.src(paths.fonts)
-        .pipe(gulp.dest('./SITE/fonts'))
+        .pipe(gulp.dest('./SITE/fonts'));
 })
 
 gulp.task('copyimgs', function() {
-    gulp.src(paths.fonts)
-        .pipe(gulp.dest('./SITE/imgs'))
+    gulp.src(paths.images)
+        .pipe(gulp.dest('./SITE/imgs'));
 })
 
-gulp.task('build', ['watch', 'pug', 'compileCss', 'minjs', 'copyfonts', 'copyimgs']);
+gulp.task('copycss', function() {
+    gulp.src(paths.css)
+        .pipe(gulp.dest('./SITE/css'));
+})
+
+gulp.task('build', ['watch', 'pug', 'compileCss', 'minjs', 'copyfonts', 'copyimgs', 'copycss']);
 
 gulp.task('webserver', ['build'], function () {
     gulp.src('SITE')
