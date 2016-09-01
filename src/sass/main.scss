@@ -1,5 +1,3 @@
-@import "materialize";
-
 body {
     background-color: #fcfcfc;
     display: flex;
@@ -88,7 +86,13 @@ a.brand-logo {
     width: 120px;
 }
 
-@media #{$medium-and-up} {
+@media only screen and (min-height: 600px) {
+    #info .row.center.login-div {
+        margin-top: 5em;
+    }
+}
+
+@media only screen and (min-width : 601px) {
     a.brand-logo.left {
         left: 0;
         margin-left: 15px;
@@ -101,12 +105,8 @@ a.brand-logo {
             line-height: 64px;
         }
     }
-
-    #info .row.center.login-div {
-        margin-top: 5em;
-    }
 }
 
-@media #{$large-and-up} {
-    // styles for large screens and up
+@media only screen and (min-width : 993px) {
+
 }

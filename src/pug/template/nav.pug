@@ -1,3 +1,10 @@
+ul#nav-dropdown.dropdown-content
+  li
+    a one
+  li
+    a two
+  li
+    a three
 nav.blue(role='navigation')
   .nav-wrapper
     a.brand-logo.left.nav-logo(href='#')
@@ -10,6 +17,6 @@ nav.blue(role='navigation')
         a.waves-effect.btn-flat.dd-nav-buttons
           i.fa.fa-user.fa-nav
       li
-        button.btn-flat.dd-nav-buttons.hamburger.hamburger--spin.waves-effect(type='button')
+        button.btn-flat.dd-nav-buttons.hamburger.hamburger--spin.waves-effect.dropdown-button(type='button' data-activates='nav-dropdown')
           span.hamburger-box
             span.hamburger-inner
