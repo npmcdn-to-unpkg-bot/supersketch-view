@@ -1,0 +1,30 @@
+body {
+  background-color: #fcfcfc; }
+
+nav ul .hamburger {
+  margin-top: -2px;
+  overflow: hidden; }
+  nav ul .hamburger .hamburger-box {
+    height: 10px; }
+
+nav ul .hamburger-inner, nav ul .hamburger-inner::before, nav ul .hamburger-inner::after {
+  background-color: #fcfcfc; }
+
+nav ul .btn-flat.dd-nav-buttons {
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  width: 60px;
+  text-align: center;
+  padding: 0; }
+  nav ul .btn-flat.dd-nav-buttons i {
+    line-height: 54px; }
+  nav ul .btn-flat.dd-nav-buttons .fa-nav {
+    color: #fcfcfc;
+    font-size: 2.5rem; }
+
+@media only screen and (min-width: 601px) {
+  nav ul .btn-flat.dd-nav-buttons {
+    width: 80px; }
+    nav ul .btn-flat.dd-nav-buttons i {
+      line-height: 64px; } }
