@@ -11,7 +11,9 @@ var webserver = require('gulp-webserver');
 var paths = {
     sass: './src/sass/**/*.scss',
     pug: './src/pug/**/*.pug',
-    js: './src/js/**/*.js'
+    js: './src/js/**/*.js',
+    fonts: './src/fonts/**/*.{ttf,woff,woff2,eof,eot,svg}',
+    images: './src/imgs/**/*.{svg,png,jpg,jpeg,gif}'
 }
 
 gulp.task('sass', function () {
@@ -61,7 +63,17 @@ gulp.task('watch', function () {
     gulp.watch(paths.js, ['minjs']);
 });
 
-gulp.task('build', ['watch', 'pug', 'compileCss', 'minjs']);
+gulp.task('copyfonts', function() {
+    gulp.src(paths.fonts)
+        .pipe(gulp.dest('./SITE/fonts'))
+})
+
+gulp.task('copyimgs', function() {
+    gulp.src(paths.fonts)
+        .pipe(gulp.dest('./SITE/imgs'))
+})
+
+gulp.task('build', ['watch', 'pug', 'compileCss', 'minjs', 'copyfonts', 'copyimgs']);
 
 gulp.task('webserver', ['build'], function () {
     gulp.src('SITE')
