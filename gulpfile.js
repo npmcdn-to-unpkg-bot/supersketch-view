@@ -9,7 +9,7 @@ var path = require('path');
 var pugInheritance = require('gulp-pug-inheritance');
 var webserver = require('gulp-webserver');
 var paths = {
-    sass: './src/sass/**/*.scss',
+    sass: ['./src/sass/**/*.scss', '!./src/sass/materialize.scss', '!./src/sass/components/**/*.scss'],
     pug: './src/pug/**/*.pug',
     js: './src/js/**/*.js',
     fonts: './src/fonts/**/*.{ttf,woff,woff2,eof,eot,svg}',
