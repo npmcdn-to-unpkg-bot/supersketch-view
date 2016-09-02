@@ -21,35 +21,41 @@
     h4.center.indigo-text.text-lighten-1 Register
     form.col.s12(action='' method='post')
       .row
+        .input-field.col.s6
+          input#register-firstname.validate(type='text' name='first_name')
+          label(for='register-firstname') First name
+        .input-field.col.s6
+          input#register-lastname.validate(type='text' name='last_name')
+          label(for='register-lastname') Last name
+      .row
         .input-field.col.s12
           i.fa.fa-envelope.prefix.indigo-text.text-lighten-2
           input#register-email.validate(type='email' name='email' required)
           label(for='register-email' data-error="That email doesn't appear valid to me!") Email
+            span.red-text
+              |  *
       .row
         .input-field.col.s12
           i.fa.fa-user.prefix.indigo-text.text-lighten-2
           input#register-username.validate(type='text' name='username' required)
-          label(for='register-username') Username
-      .row
-        .input-field.col.s12
-          i.fa.fa-user.prefix.indigo-text.text-lighten-2
-          input#register-firstname.validate(type='text' name='first_name' required)
-          label(for='register-firstname') First name
-      .row
-        .input-field.col.s12
-          i.fa.fa-user.prefix.indigo-text.text-lighten-2
-          input#register-lastname.validate(type='text' name='last_name' required)
-          label(for='register-lastname') Last name
+          label(for='register-username') Display name
+            span.red-text
+              |  *
+          
       .row
         .input-field.col.s12
           i.fa.fa-lock.prefix.indigo-text.text-lighten-2
           input#register-password.validate(type='password' name='password' pattern='(?=.*[^a-zA-Z0-9]).{8,}' required)
-          label(for='register-password' data-error='Minimum 8 character length with at least 1 symbol') Password
+          label(for='register-password' data-error='Minimum 8 characters, at least 1 symbol') Password
+            span.red-text
+              |  *
       .row
         .input-field.col.s12
           i.fa.fa-lock.prefix.indigo-text.text-lighten-2
           input#register-password2.validate(type='password' name='password2' pattern='(?=.*[^a-zA-Z0-9]).{8,}' required)
           label(for='register-password2') Confirm password
+            span.red-text
+              |  *
       .row.center.modal-submit
         button.indigo.lighten-1.col.s12.btn.waves-effect.waves-light.btn-large(type='submit')
           | Register

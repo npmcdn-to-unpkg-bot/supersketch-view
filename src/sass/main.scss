@@ -12,6 +12,17 @@ main {
     flex: 1 0 auto;
 }
 
+.no-marg-bot {
+    margin-bottom: 0;
+}
+
+#homepage {
+    .divider {
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+}
+
 #info {
     padding-top: 2em;
 
@@ -45,6 +56,10 @@ main {
 
 // Login and register modals
 #modal-login.modal, #modal-register.modal {
+    .row {
+        margin-bottom: 0;
+    }
+
     .modal-submit {
         margin-top: 3em;
         margin-bottom: 0;

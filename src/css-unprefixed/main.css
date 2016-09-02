@@ -18,6 +18,13 @@ body {
 main {
   flex: 1 0 auto; }
 
+.no-marg-bot {
+  margin-bottom: 0; }
+
+#homepage .divider {
+  margin-top: 20px;
+  margin-bottom: 15px; }
+
 #info {
   padding-top: 2em; }
   #info .row .card-title {
@@ -33,6 +40,9 @@ main {
   padding: 0;
   margin-left: 1.5em;
   margin-right: 1.5em; }
+
+#modal-login.modal .row, #modal-register.modal .row {
+  margin-bottom: 0; }
 
 #modal-login.modal .modal-submit, #modal-register.modal .modal-submit {
   margin-top: 3em;
