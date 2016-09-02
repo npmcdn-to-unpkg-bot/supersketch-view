@@ -1,0 +1,44 @@
+extends template/layout
+
+block content
+  include template/nav
+  main
+    .section
+      .container#info-lobby
+        .card-panel
+          .row
+            h4.center Multiplayer Lobby
+          .row
+            .divider
+          .row
+            .input-field.col.s12
+              input#room-create(type='text' class='validate' style='display:inline')
+              label(for='room-create') Room name
+            .input-field.col.s12.m6
+              input#room-search(type='text')
+              label(for='room-search')
+                i.fa.fa-search
+                span
+                  |  Find a room
+          .row
+            table#room-table.striped
+              col(style='width:50%')
+              col(style='width:25%')
+              col(style='width:25%')
+              thead
+                tr
+                  th(data-field='') Room Name
+                  th(data-field='') Players
+                  th(data-field='') Availability
+              tbody
+                tr
+                  td Test Room 123
+                  td 0/10
+                  td
+                    a.waves-effect.waves-light.btn.green.accent-4 JOIN
+                tr
+                  td Test Room 456 - I AM A VERY VERY LONG ROOM NAME
+                  td 10/10
+                  td
+                    a.waves-effect.waves-light.btn.red FULL
+  include template/footer

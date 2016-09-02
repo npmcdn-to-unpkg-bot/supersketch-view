@@ -21,6 +21,10 @@ main {
 .no-marg-bot {
   margin-bottom: 0; }
 
+.marg-top-bot {
+  margin-top: 20px;
+  margin-bottom: 15px; }
+
 #homepage .divider {
   margin-top: 20px;
   margin-bottom: 15px; }
@@ -29,6 +33,13 @@ main {
   padding-top: 2em; }
   #info .row .card-title {
     font-weight: 400; }
+
+#info-lobby {
+  padding-top: 4em; }
+  #info-lobby .input-field.col.s12.m6 {
+    margin-right: auto;
+    float: none;
+    clear: both; }
 
 #super-header {
   font-weight: 600;
@@ -123,6 +134,16 @@ a.brand-logo {
     width: 24px;
     height: 24px;
     font-size: 1.5em; }
+
+#room-table th {
+  text-align: center; }
+
+#room-table td {
+  text-align: center; }
+
+#room-table td:first-of-type {
+  text-align: left;
+  padding: 0 1em; }
 
 @media only screen and (min-height: 600px) {
   .login-div a {

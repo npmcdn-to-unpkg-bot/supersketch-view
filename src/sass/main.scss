@@ -16,6 +16,11 @@ main {
     margin-bottom: 0;
 }
 
+.marg-top-bot {
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
 #homepage {
     .divider {
         margin-top: 20px;
@@ -31,6 +36,16 @@ main {
         .card-title {
             font-weight: 400;
         }
+    }
+}
+
+#info-lobby {
+    padding-top: 4em;
+
+    .input-field.col.s12.m6 {
+        margin-right: auto;
+        float: none;
+        clear: both;
     }
 }
 
@@ -168,6 +183,21 @@ a.brand-logo {
         width: 24px;
         height: 24px;
         font-size: 1.5em;
+    }
+}
+
+// Lobby stuff
+
+#room-table {
+    th {
+        text-align: center;
+    }
+    td {
+        text-align: center;
+    }
+    td:first-of-type {
+        text-align: left;
+        padding: 0 1em;
     }
 }
 
