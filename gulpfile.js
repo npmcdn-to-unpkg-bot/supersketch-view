@@ -84,9 +84,10 @@ gulp.task('build', ['watch', 'pug', 'compileCss', 'minjs', 'copyfonts', 'copyimg
 gulp.task('webserver', ['build'], function () {
     gulp.src('SITE')
         .pipe(webserver({
+            host: "192.168.1.25",
             livereload: true,
             fallback: "index.html",
-            port: 3000,
+            port: 4000,
             open: true
         }));
 });
