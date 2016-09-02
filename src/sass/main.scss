@@ -1,3 +1,5 @@
+@import "components/scrollbar/scrollbar";
+
 body {
     background-color: #fcfcfc;
     display: flex;
@@ -75,6 +77,19 @@ main {
 
 #modal-register.modal {
     width: 320px;
+}
+
+#modal-register::-webkit-scrollbar-track {
+    background-color: #fafafa;
+}
+
+#modal-register::-webkit-scrollbar {
+    width: 10px;
+    background-color: #fafafa;
+}
+
+#modal-register::-webkit-scrollbar-thumb {
+    background-color: #7986cb;
 }
 
 nav {

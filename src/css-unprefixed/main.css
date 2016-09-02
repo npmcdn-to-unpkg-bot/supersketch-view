@@ -1,3 +1,13 @@
+::-webkit-scrollbar-track {
+  background-color: #F5F5F5; }
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5; }
+
+::-webkit-scrollbar-thumb {
+  background-color: #90a4ae; }
+
 body {
   background-color: #fcfcfc;
   display: flex;
@@ -45,6 +55,16 @@ main {
 
 #modal-register.modal {
   width: 320px; }
+
+#modal-register::-webkit-scrollbar-track {
+  background-color: #fafafa; }
+
+#modal-register::-webkit-scrollbar {
+  width: 10px;
+  background-color: #fafafa; }
+
+#modal-register::-webkit-scrollbar-thumb {
+  background-color: #7986cb; }
 
 nav ul .hamburger {
   margin-top: -2px;
