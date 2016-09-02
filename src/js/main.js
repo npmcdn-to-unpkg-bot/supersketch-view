@@ -14,6 +14,9 @@ $(document).ready(function() {
         $hamburger.removeClass("is-active");
     });
     // Set up modals
-    $('.modal-trigger').leanModal();
+    $('.modal-trigger').leanModal({
+        in_duration: 0,
+        out_duration: 0
+    });
 
 });
