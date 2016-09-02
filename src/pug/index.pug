@@ -2,6 +2,7 @@ extends template/layout
 
 block content
   include template/nav
+  include template/modals
   main
     #index-banner.section.no-pad-bot
       .container#info
@@ -9,8 +10,50 @@ block content
         .row.center
           h5.header.col.s12.light.blue-grey-text Sketch your favourite things! Play with friends and have them guess!
         .row.center.login-div
-          a.valight-center.btn-large.waves-effect.waves-light.teal-accent-4(href='#') Login
-          a.valight-center.btn-large.waves-effect.waves-light.teal-accent-4(href='#') Register
+          a.modal-trigger.btn-large.waves-effect.waves-light.teal-accent-4(href='#modal-login') Login
+          a.modal-trigger.btn-large.waves-effect.waves-light.teal-accent-4(href='#modal-register') Register
+        .row
+          .col.s12.m6
+            .card.blue.lighten-4
+              .card-content.blue-grey-text
+                span.card-title What is Super Sketch?
+                p
+                  | I am a very simple card. I am good at containing small bits of information.
+                  | I am convenient because I require little markup to use effectively.
+              .card-action
+                a.blue-grey-text(href='#') This is a link
+                a.blue-grey-text(href='#') This is a link
+          .col.s12.m6
+            .card.red.lighten-4
+              .card-content.blue-grey-text
+                span.card-title How do I play?
+                p
+                  | I am a very simple card. I am good at containing small bits of information.
+                  | I am convenient because I require little markup to use effectively.
+              .card-action
+                a.blue-grey-text(href='#') This is a link
+                a.blue-grey-text(href='#') This is a link
+        .row
+          .col.s12.m6
+            .card.yellow.lighten-4
+              .card-content.blue-grey-text
+                span.card-title Card Title
+                p
+                  | I am a very simple card. I am good at containing small bits of information.
+                  | I am convenient because I require little markup to use effectively.
+              .card-action
+                a.blue-grey-text(href='#') This is a link
+                a.blue-grey-text(href='#') This is a link
+          .col.s12.m6
+            .card.green.lighten-4
+              .card-content.blue-grey-text
+                span.card-title Card Title
+                p
+                  | I am a very simple card. I am good at containing small bits of information.
+                  | I am convenient because I require little markup to use effectively.
+              .card-action
+                a.blue-grey-text(href='#') This is a link
+                a.blue-grey-text(href='#') This is a link
     //- .container
     //-   .section
     //-     // Icon Section

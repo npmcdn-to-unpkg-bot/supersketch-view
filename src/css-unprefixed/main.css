@@ -10,9 +10,8 @@ main {
 
 #info {
   padding-top: 2em; }
-  #info .row.center {
-    margin-top: 2em;
-    margin-bottom: 2em; }
+  #info .row .card-title {
+    font-weight: 400; }
 
 #super-header {
   font-weight: 600;
@@ -22,8 +21,30 @@ main {
 .login-div a {
   width: 100px;
   padding: 0;
-  margin-left: 1em;
-  margin-right: 1em; }
+  margin-left: 1.5em;
+  margin-right: 1.5em; }
+
+#modal-login.modal .modal-submit, #modal-register.modal .modal-submit {
+  margin-top: 3em;
+  margin-bottom: 0; }
+
+#modal-login.modal form, #modal-register.modal form {
+  padding: 0; }
+  #modal-login.modal form .row .input-field .prefix, #modal-register.modal form .row .input-field .prefix {
+    margin-top: 0.25em; }
+  #modal-login.modal form .fa, #modal-register.modal form .fa {
+    text-align: center;
+    padding-right: 10px; }
+
+#modal-login.modal {
+  width: 320px; }
+  #modal-login.modal form .password-reset {
+    float: right; }
+  #modal-login.modal form #login-password {
+    margin-bottom: 10px; }
+
+#modal-register.modal {
+  width: 320px; }
 
 nav ul .hamburger {
   margin-top: -2px;
@@ -74,8 +95,9 @@ a.brand-logo {
     font-size: 1.5em; }
 
 @media only screen and (min-height: 600px) {
-  #info .row.center.login-div {
-    margin-top: 5em; } }
+  .login-div a {
+    margin-left: 2em;
+    margin-right: 2em; } }
 
 @media only screen and (min-width: 601px) {
   a.brand-logo.left {
@@ -87,3 +109,11 @@ a.brand-logo {
     width: 80px; }
     nav ul .btn-flat.dd-nav-buttons i {
       line-height: 64px; } }
+
+@media only screen and (min-height: 1080px) {
+  #info .row.center.login-div {
+    margin-top: 5em;
+    margin-bottom: 5em; }
+  #info .row {
+    margin-top: 2em;
+    margin-bottom: 2em; } }

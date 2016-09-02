@@ -13,9 +13,11 @@ main {
 #info {
     padding-top: 2em;
 
-    .row.center {
-        margin-top: 2em;
-        margin-bottom: 2em;
+    .row {
+
+        .card-title {
+            font-weight: 400;
+        }
     }
 }
 
@@ -34,9 +36,45 @@ main {
     a {
         width: 100px;
         padding: 0;
-        margin-left: 1em;
-        margin-right: 1em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
     }
+}
+
+// Login and register modals
+#modal-login.modal, #modal-register.modal {
+    .modal-submit {
+        margin-top: 3em;
+        margin-bottom: 0;
+    }
+
+    form {
+        padding: 0;
+        .row .input-field .prefix {
+            margin-top: 0.25em;
+        }
+        .fa {
+            text-align: center;
+            padding-right: 10px;
+        }
+    }
+}
+
+#modal-login.modal {
+    width: 320px;
+    form {
+        .password-reset {
+            float: right;
+        }
+        
+        #login-password {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+#modal-register.modal {
+    width: 320px;
 }
 
 nav {
@@ -104,8 +142,11 @@ a.brand-logo {
 }
 
 @media only screen and (min-height: 600px) {
-    #info .row.center.login-div {
-        margin-top: 5em;
+    .login-div {
+        a {
+            margin-left: 2em;
+            margin-right: 2em;
+        }
     }
 }
 
@@ -130,4 +171,16 @@ a.brand-logo {
 
 @media only screen and (min-width : 993px) {
 
+}
+
+@media only screen and (min-height : 1080px) {
+    #info .row.center.login-div {
+        margin-top: 5em;
+        margin-bottom: 5em;
+    }
+
+    #info .row {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
 }

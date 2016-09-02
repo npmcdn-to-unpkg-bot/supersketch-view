@@ -13,5 +13,7 @@ $(document).ready(function() {
         e.preventDefault();
         $hamburger.removeClass("is-active");
     });
+    // Set up modals
+    $('.modal-trigger').leanModal();
 
 });
