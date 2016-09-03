@@ -36,10 +36,8 @@ main {
 
 #info-lobby {
   padding-top: 4em; }
-  #info-lobby .input-field.col.s12.m6 {
-    margin-right: auto;
-    float: none;
-    clear: both; }
+  #info-lobby .create-room {
+    margin-top: 1em; }
 
 #super-header {
   font-weight: 600;
@@ -52,39 +50,41 @@ main {
   margin-left: 1.5em;
   margin-right: 1.5em; }
 
-#modal-login.modal .row, #modal-register.modal .row {
+#login.modal .row, #register.modal .row, #create.modal .row {
   margin-bottom: 0; }
 
-#modal-login.modal .modal-submit, #modal-register.modal .modal-submit {
+#login.modal .modal-submit, #register.modal .modal-submit, #create.modal .modal-submit {
   margin-top: 3em;
   margin-bottom: 0; }
 
-#modal-login.modal form, #modal-register.modal form {
+#login.modal form, #register.modal form, #create.modal form {
   padding: 0; }
-  #modal-login.modal form .row .input-field .prefix, #modal-register.modal form .row .input-field .prefix {
+  #login.modal form .row .input-field .prefix, #register.modal form .row .input-field .prefix, #create.modal form .row .input-field .prefix {
     margin-top: 0.25em; }
-  #modal-login.modal form .fa, #modal-register.modal form .fa {
+  #login.modal form .fa, #register.modal form .fa, #create.modal form .fa {
     text-align: center;
     padding-right: 10px; }
 
-#modal-login.modal {
-  width: 320px; }
-  #modal-login.modal form .password-reset {
-    float: right; }
-  #modal-login.modal form #login-password {
-    margin-bottom: 10px; }
+#login.modal form .password-reset {
+  float: right; }
 
-#modal-register.modal {
+#login.modal form #login-password {
+  margin-bottom: 10px; }
+
+#login.modal, #register.modal {
   width: 320px; }
 
-#modal-register::-webkit-scrollbar-track {
+#create.modal {
+  width: 320px; }
+
+#register::-webkit-scrollbar-track {
   background-color: #fafafa; }
 
-#modal-register::-webkit-scrollbar {
+#register::-webkit-scrollbar {
   width: 10px;
   background-color: #fafafa; }
 
-#modal-register::-webkit-scrollbar-thumb {
+#register::-webkit-scrollbar-thumb {
   background-color: #7986cb; }
 
 nav ul .hamburger {
@@ -159,7 +159,9 @@ a.brand-logo {
   nav ul .btn-flat.dd-nav-buttons {
     width: 80px; }
     nav ul .btn-flat.dd-nav-buttons i {
-      line-height: 64px; } }
+      line-height: 64px; }
+  #login.modal, #register.modal, #create.modal {
+    width: 420px; } }
 
 @media only screen and (min-height: 1080px) {
   #info .row.center.login-div {

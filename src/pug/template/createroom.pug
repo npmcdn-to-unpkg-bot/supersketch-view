@@ -1,0 +1,19 @@
+#create.modal.light-blue-text.text-accent-4
+  .modal-content
+    h4.center Create Room
+    form.col.s12(action='' method='post')
+      .row
+        .input-field.col.s12
+          i.fa.fa-font.prefix.light-blue-text.text-accent-4
+          input#room-name.validate(type='text' name='room_name' required)
+          label(for='room-name' data-error="That name doesn't appear valid to me!") Room name
+            span.red-text
+              |  *
+        .input-field.col.s12
+          i.fa.fa-lock.prefix.light-blue-text.text-accent-4
+          input#room-password.validate(type='text' name='room_password')
+          label(for='room-password') Password (optional)
+      .row.center.modal-submit
+        button.light-blue.col.s12.btn.waves-effect.waves-light.btn-large(type='submit')
+          | Create Room
+

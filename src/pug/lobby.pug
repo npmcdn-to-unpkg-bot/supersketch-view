@@ -2,24 +2,25 @@ extends template/layout
 
 block content
   include template/nav
+  include template/createroom
   main
     .section
-      .container#info-lobby
+      .container#info-lobby.blue-grey-text.text-darken-2
         .card-panel
           .row
             h4.center Multiplayer Lobby
           .row
             .divider
           .row
-            .input-field.col.s12
-              input#room-create(type='text' class='validate' style='display:inline')
-              label(for='room-create') Room name
-            .input-field.col.s12.m6
-              input#room-search(type='text')
-              label(for='room-search')
-                i.fa.fa-search
-                span
-                  |  Find a room
+            .col.s12.m4
+              a.create-room.col.s12.modal-trigger.btn-large.waves-effect.waves-light.teal-accent-4(href='#create') Create Room
+            .col.s12.m8
+              .input-field.col.s12
+                input#room-search(type='text')
+                label(for='room-search')
+                  i.fa.fa-search
+                  span
+                    |  Find a room
           .row
             table#room-table.striped
               col(style='width:50%')

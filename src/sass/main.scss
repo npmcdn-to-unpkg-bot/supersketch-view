@@ -42,10 +42,8 @@ main {
 #info-lobby {
     padding-top: 4em;
 
-    .input-field.col.s12.m6 {
-        margin-right: auto;
-        float: none;
-        clear: both;
+    .create-room {
+        margin-top: 1em;
     }
 }
 
@@ -70,7 +68,7 @@ main {
 }
 
 // Login and register modals
-#modal-login.modal, #modal-register.modal {
+#login.modal, #register.modal, #create.modal {
     .row {
         margin-bottom: 0;
     }
@@ -92,8 +90,7 @@ main {
     }
 }
 
-#modal-login.modal {
-    width: 320px;
+#login.modal {
     form {
         .password-reset {
             float: right;
@@ -105,20 +102,24 @@ main {
     }
 }
 
-#modal-register.modal {
+#login.modal, #register.modal {
     width: 320px;
 }
 
-#modal-register::-webkit-scrollbar-track {
+#create.modal {
+    width: 320px;
+}
+
+#register::-webkit-scrollbar-track {
     background-color: #fafafa;
 }
 
-#modal-register::-webkit-scrollbar {
+#register::-webkit-scrollbar {
     width: 10px;
     background-color: #fafafa;
 }
 
-#modal-register::-webkit-scrollbar-thumb {
+#register::-webkit-scrollbar-thumb {
     background-color: #7986cb;
 }
 
@@ -226,6 +227,10 @@ a.brand-logo {
         i {
             line-height: 64px;
         }
+    }
+
+    #login.modal, #register.modal, #create.modal {
+        width: 420px;
     }
 }
 
