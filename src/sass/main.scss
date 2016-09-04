@@ -161,6 +161,82 @@ main {
                 box-shadow: 0 0 5px 2px rgba(81, 203, 238, 0.4);
             }
         }
+        .chat-list {
+            margin: 0;
+            padding: 10px;
+            li {
+                margin: 0.5em 0;
+            }
+            .system, .send, .receive {
+                font-size: 1.5em;
+                width: 100%;
+                position: relative;
+                .content {
+                    text-align: left;
+                    word-wrap: break-word;
+                    max-width: 100%;
+                    padding: 5px 10px;
+                    border-radius: 20px;
+                    display: inline-block;
+                }
+            }
+            .system {
+                text-align: center;
+                > .content {
+                    text-align: center;
+                    color: #eceff1;
+                    background-color: #7c4dff;
+                }
+            }
+            .send {
+                text-align: right;
+                img, i {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    font-style: normal;
+                    font-weight: 500;
+                    color: #fafafa;
+                    text-align: center;
+                    line-height: 2.38em;
+                    margin-left: 10px;
+                    position: absolute;
+                    right: 0;
+                    bottom: -8px;
+                }
+                > .content {
+                    margin-right: 55px;
+                    margin-left: 35px;
+                    border-bottom-right-radius: 0;
+                    color: #fafafa;
+                    background-color: #448aff;
+                }
+            }
+            .receive {
+                text-align: left;
+                img, i {
+                    display: block;
+                    width: 50px;
+                    height: 50px;
+                    font-style: normal;
+                    font-weight: 500;
+                    color: #fafafa;
+                    text-align: center;
+                    line-height: 2.38em;
+                    margin-right: 10px;
+                    position: absolute;
+                    left: 0;
+                    bottom: -8px;
+                }
+                > .content {
+                    margin-left: 55px;
+                    margin-right: 35px;
+                    background-color: #eeeeee;
+                    color: #424242;
+                    border-bottom-left-radius: 0;
+                }
+            }
+        }
     }
 }
 

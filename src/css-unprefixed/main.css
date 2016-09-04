@@ -131,6 +131,71 @@ main {
   #play #chat .chat-input:focus {
     box-shadow: 0 0 5px 2px rgba(81, 203, 238, 0.4); }
 
+#play #chat .chat-list {
+  margin: 0;
+  padding: 10px; }
+  #play #chat .chat-list li {
+    margin: 0.5em 0; }
+  #play #chat .chat-list .system, #play #chat .chat-list .send, #play #chat .chat-list .receive {
+    font-size: 1.5em;
+    width: 100%;
+    position: relative; }
+    #play #chat .chat-list .system .content, #play #chat .chat-list .send .content, #play #chat .chat-list .receive .content {
+      text-align: left;
+      word-wrap: break-word;
+      max-width: 100%;
+      padding: 5px 10px;
+      border-radius: 20px;
+      display: inline-block; }
+  #play #chat .chat-list .system {
+    text-align: center; }
+    #play #chat .chat-list .system > .content {
+      text-align: center;
+      color: #eceff1;
+      background-color: #7c4dff; }
+  #play #chat .chat-list .send {
+    text-align: right; }
+    #play #chat .chat-list .send img, #play #chat .chat-list .send i {
+      display: block;
+      width: 50px;
+      height: 50px;
+      font-style: normal;
+      font-weight: 500;
+      color: #fafafa;
+      text-align: center;
+      line-height: 2.38em;
+      margin-left: 10px;
+      position: absolute;
+      right: 0;
+      bottom: -8px; }
+    #play #chat .chat-list .send > .content {
+      margin-right: 55px;
+      margin-left: 35px;
+      border-bottom-right-radius: 0;
+      color: #fafafa;
+      background-color: #448aff; }
+  #play #chat .chat-list .receive {
+    text-align: left; }
+    #play #chat .chat-list .receive img, #play #chat .chat-list .receive i {
+      display: block;
+      width: 50px;
+      height: 50px;
+      font-style: normal;
+      font-weight: 500;
+      color: #fafafa;
+      text-align: center;
+      line-height: 2.38em;
+      margin-right: 10px;
+      position: absolute;
+      left: 0;
+      bottom: -8px; }
+    #play #chat .chat-list .receive > .content {
+      margin-left: 55px;
+      margin-right: 35px;
+      background-color: #eeeeee;
+      color: #424242;
+      border-bottom-left-radius: 0; }
+
 #super-header {
   font-weight: 600;
   -webkit-text-stroke: 1px #00796b;
