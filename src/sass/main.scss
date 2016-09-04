@@ -51,6 +51,7 @@ main {
     margin: 4em 0 2em 0;
     text-align: center;
     .word-header {
+        font-size: 1.5rem;
         font-weight: 700;
         display: inline-block;
         background-color: #4db6ac;
@@ -115,6 +116,7 @@ main {
         padding: 10px;
         background-color: #90caf9;
         border-radius: 10px;
+        margin-bottom: 10px;
     }
 
     #player-list {
@@ -130,7 +132,7 @@ main {
 
     #game-canvas {
         border-radius: 5px;
-        min-height: 500px;
+        min-height: 300px;
     }
 
     #chat {
@@ -148,6 +150,15 @@ main {
             }
             #chat-send {
                 border-radius: 0 0 5px 5px;
+            }
+        }
+        .chat-input {
+            margin-bottom: 0;
+            border: none;
+            padding-left: 8px;
+            box-sizing: border-box;
+            &:focus {
+                box-shadow: 0 0 5px 2px rgba(81, 203, 238, 0.4);
             }
         }
     }
@@ -341,13 +352,19 @@ a.brand-logo {
         width: 420px;
     }
 
-
+    #play #game-canvas {
+        min-height: 500px;
+    }
 
     #play #player-list {
         padding: 10px;
         ul.collection {
             max-height: none;
         }
+    }
+
+    #word .word-header {
+        font-size: 2rem;
     }
 }
 
@@ -361,6 +378,9 @@ a.brand-logo {
     }
     #word {
         margin: 2em 0;
+        .word-header {
+            font-size: 2.5rem;
+        }
     }
     #player-list {
         width: 24%;
