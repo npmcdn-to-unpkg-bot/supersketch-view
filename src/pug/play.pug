@@ -1,0 +1,66 @@
+extends template/layout
+
+block content
+  include template/nav
+  main
+    .section
+      #play.blue-grey-text.text-darken-2
+        .play-wrapper
+          .row
+            #play-wrapper-1.col.s12.m12.l9
+              #player-list.col.s12.m12.l3
+                ul.collection.blue.lighten-3
+                  li.collection-item.avatar.blue.lighten-2
+                    i.circle.grey.darken-2.text K
+                    span.light-blue-text.text-lighten-5 Kevin Xiao
+                    p.amber-text 500 PTS
+                    p.lvl.light-blue-text.text-lighten-5 LVL 0-9
+                  li.collection-item.avatar.blue.lighten-3
+                    i.circle.grey.darken-2.text K
+                    span.white-text Kevin Xiao
+                    p.white-text 200 PTS
+                    p.lvl.yellow-text LVL 10-49
+                  li.collection-item.avatar.blue.lighten-2
+                    i.circle.grey.darken-2.text K
+                    span.white-text Kevin Xiao
+                    p.white-text 0 PTS
+                    p.lvl.pink-text.text-darken-1 LVL 50-99
+                  li.collection-item.avatar.blue.lighten-2
+                    i.circle.grey.darken-2.text K
+                    span.white-text Kevin Xiao
+                    p.white-text 100 PTS
+                    p.lvl.blue-text.text-accent-4 LVL 100+
+                  li.collection-item.avatar.blue.lighten-2
+                    i.circle.grey.darken-2.text K
+                    span.white-text Kevin Xiao
+                    p.white-text 0 PTS
+                    p.lvl.green-text.text-accent-2 LVL 300+
+                  li.collection-item.avatar.blue.lighten-2
+                    i.circle.grey.darken-2.text K
+                    span.white-text Kevin Xiao
+                    p.white-text 0 PTS
+                    p.lvl.purple-text.text-accent-4 LVL 1000
+                  li.collection-item.avatar.blue.lighten-2
+                    i.circle.grey.darken-2.text K
+                    span.white-text Kevin Xiao
+                    p.white-text 100 PTS
+                  li.collection-item.avatar.blue.lighten-2
+                    i.circle.grey.darken-2.text K
+                    span.white-text Kevin Xiao
+                    p.white-text 0 PTS
+              #game.col.s12.m12.l9
+                #game-canvas-wrapper.collection.blue.lighten-3
+                  #game-canvas.white
+            #play-wrapper-2.col.s12.m12.l3
+              #chat
+                #chat-wrapper.collection.blue.lighten-3
+                  .chat-body.blue.lighten-2
+                    #chat-top
+                      .row
+                        button.col.s4.btn.waves-effect.waves-light Ready
+                        button.col.s4.btn.waves-effect.waves-light Invite
+                        button.col.s4.btn.waves-effect.waves-light Cheater
+                    #chat-content.blue.lighten-4
+                    #chat-send.blue.lighten-5
+                      input(type='text')
+  include template/footer

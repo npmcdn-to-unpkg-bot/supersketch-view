@@ -47,6 +47,77 @@ main {
     }
 }
 
+#play {
+    padding-top: 4em;
+    .card-panel {
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    #player-list {
+        ul.collection {
+            font-weight: 500;
+        }
+
+        li.collection-item.avatar {
+            padding-right: 0.5em;
+            min-height: 60px;
+            border: none;
+            &:first-of-type {
+                border-radius: 10px 10px 0 0;
+            }
+            &:last-of-type {
+                border-radius: 0 0 10px 10px;
+            }
+            i.circle.text {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 2rem;
+            }
+            p.lvl {
+                position: absolute;
+                bottom: 10px;
+                right: 15px;
+            }
+        }
+    }
+
+    .collection {
+        padding: 1em;
+        border-radius: 20px;
+        min-height: 500px;
+        width: 100%;
+    }
+
+    #game-canvas-wrapper {
+        padding: 10px;
+    }
+
+    #game-canvas {
+        border-radius: 10px;
+        min-height: 500px;
+    }
+
+    #chat {
+        .row {
+            margin-bottom: 0;
+        }
+        .chat-body {
+            border-radius: 10px;
+            #chat-top {
+                border-radius: 10px 10px 0 0;
+                padding: 1em;
+            }
+            #chat-content {
+                min-height: 300px;
+            }
+            #chat-send {
+                border-radius: 0 0 10px 10px;
+            }
+        }
+    }
+}
+
 #super-header {
     font-weight: 600;
     -webkit-text-stroke: 1px #00796b;
@@ -235,6 +306,26 @@ a.brand-logo {
 }
 
 @media only screen and (min-width : 993px) {
+    #play-wrapper-1 {
+        width: 100%;
+    }
+
+    #play-wrapper-2 {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width : 1200px) {
+    #play-wrapper-1 {
+        width: 75%;
+    }
+
+    #play-wrapper-2 {
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 1600px) {
 
 }
 

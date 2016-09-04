@@ -39,6 +39,51 @@ main {
   #info-lobby .create-room {
     margin-top: 1em; }
 
+#play {
+  padding-top: 4em; }
+  #play .card-panel {
+    background-color: transparent;
+    box-shadow: none; }
+  #play #player-list ul.collection {
+    font-weight: 500; }
+  #play #player-list li.collection-item.avatar {
+    padding-right: 0.5em;
+    min-height: 60px;
+    border: none; }
+    #play #player-list li.collection-item.avatar:first-of-type {
+      border-radius: 10px 10px 0 0; }
+    #play #player-list li.collection-item.avatar:last-of-type {
+      border-radius: 0 0 10px 10px; }
+    #play #player-list li.collection-item.avatar i.circle.text {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 2rem; }
+    #play #player-list li.collection-item.avatar p.lvl {
+      position: absolute;
+      bottom: 10px;
+      right: 15px; }
+  #play .collection {
+    padding: 1em;
+    border-radius: 20px;
+    min-height: 500px;
+    width: 100%; }
+  #play #game-canvas-wrapper {
+    padding: 10px; }
+  #play #game-canvas {
+    border-radius: 10px;
+    min-height: 500px; }
+  #play #chat .row {
+    margin-bottom: 0; }
+  #play #chat .chat-body {
+    border-radius: 10px; }
+    #play #chat .chat-body #chat-top {
+      border-radius: 10px 10px 0 0;
+      padding: 1em; }
+    #play #chat .chat-body #chat-content {
+      min-height: 300px; }
+    #play #chat .chat-body #chat-send {
+      border-radius: 0 0 10px 10px; }
+
 #super-header {
   font-weight: 600;
   -webkit-text-stroke: 1px #00796b;
@@ -162,6 +207,18 @@ a.brand-logo {
       line-height: 64px; }
   #login.modal, #register.modal, #create.modal {
     width: 420px; } }
+
+@media only screen and (min-width: 993px) {
+  #play-wrapper-1 {
+    width: 100%; }
+  #play-wrapper-2 {
+    width: 100%; } }
+
+@media only screen and (min-width: 1200px) {
+  #play-wrapper-1 {
+    width: 75%; }
+  #play-wrapper-2 {
+    width: 25%; } }
 
 @media only screen and (min-height: 1080px) {
   #info .row.center.login-div {
