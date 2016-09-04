@@ -4,6 +4,10 @@ block content
   include template/nav
   main
     .section
+      #word
+        h3.word-header.z-depth-1 You are drawing:
+          span
+            |  BALLOON
       #play.blue-grey-text.text-darken-2
         .play-wrapper
           .row
@@ -49,18 +53,17 @@ block content
                     span.white-text Kevin Xiao
                     p.white-text 0 PTS
               #game.col.s12.m12.l9
-                #game-canvas-wrapper.collection.blue.lighten-3
+                #game-canvas-wrapper
                   #game-canvas.white
             #play-wrapper-2.col.s12.m12.l3
               #chat
-                #chat-wrapper.collection.blue.lighten-3
-                  .chat-body.blue.lighten-2
-                    #chat-top
-                      .row
-                        button.col.s4.btn.waves-effect.waves-light Ready
-                        button.col.s4.btn.waves-effect.waves-light Invite
-                        button.col.s4.btn.waves-effect.waves-light Cheater
-                    #chat-content.blue.lighten-4
-                    #chat-send.blue.lighten-5
-                      input(type='text')
+                .chat-body.blue.lighten-2
+                  #chat-top
+                    .row
+                      button.col.s4.btn.waves-effect.waves-light Ready
+                      button.col.s4.btn.waves-effect.waves-light Invite
+                      button.col.s4.btn.waves-effect.waves-light Cheater
+                  #chat-content.blue.lighten-4
+                  #chat-send.blue.lighten-5
+                    input(type='text')
   include template/footer
