@@ -1,30 +1,30 @@
 ul#nav-dropdown.dropdown-content
   li
-    a.blue-grey-text(href='#')
+    a.blue-grey-text(href='/lobby')
       i.fa.fa-users
       span Lobby
   li
-    a.blue-grey-text(href='#')
+    a.blue-grey-text(href='/profile')
       i.fa.fa-user
       span Profile
   li
-    a.blue-grey-text(href='#')
+    a.blue-grey-text(href='/settings')
       i.fa.fa-gear
       span Settings
   li
-    a.blue-grey-text(href='#')
+    a.blue-grey-text(href='/logout')
       i.fa.fa-sign-out
       span Logout
 nav.blue(role='navigation')
   .nav-wrapper
-    a.brand-logo.left.nav-logo(href='#')
+    a.brand-logo.left.nav-logo(href='/')
       img.nav-logo(src='/imgs/sticky-note.png')
     ul#nav-mobile.right
       li
-        a.waves-effect.btn-flat.dd-nav-buttons
+        a.waves-effect.btn-flat.dd-nav-buttons(href='/')
           i.fa.fa-home.fa-nav
       li
-        a.waves-effect.btn-flat.dd-nav-buttons
+        a.waves-effect.btn-flat.dd-nav-buttons(href='/profile')
           i.fa.fa-user.fa-nav
       li
         button.btn-flat.dd-nav-buttons.hamburger.hamburger--spin.waves-effect.dropdown-button(type='button' data-activates='nav-dropdown')
