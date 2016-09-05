@@ -132,7 +132,7 @@ main {
 
     #game-canvas {
         border-radius: 5px;
-        min-height: 300px;
+        min-height: 50vh;
     }
 
     #chat {
@@ -144,7 +144,7 @@ main {
             position: relative;
             #chat-top {
                 border-radius: 0 0 5px 5px;
-                margin-top: 40px;
+                margin-top: 60px;
                 padding: 1em;
             }
             #chat-content {
@@ -153,16 +153,25 @@ main {
             #chat-send {
                 border-radius: 5px 5px 0 0;
                 width: 100%;
-                height: 40px;
+                height: 60px;
                 position: absolute;
-                top: -40px;
+                top: -60px;
                 button {
                     display: inline-block;
                     position: absolute;
                     right: 0;
-                    height: 100%;
+                    top: 0;
+                    height: 40px;
                     width: 90px;
                     padding: 0;
+                }
+                .is-typing {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    background-color: #00bfa5;
+                    padding-left: 8px;
+                    color: white;
                 }
             }
         }
@@ -172,7 +181,7 @@ main {
             padding-left: 8px;
             padding-right: 90px;
             box-sizing: border-box;
-            height: 100%;
+            height: 40px;
             &:focus {
                 box-shadow: 0 0 5px 2px rgba(81, 203, 238, 0.4);
             }
@@ -453,7 +462,7 @@ a.brand-logo {
     }
 
     #play #game-canvas {
-        min-height: 500px;
+        min-height: 512px;
     }
 
     #play #player-list {
@@ -499,11 +508,22 @@ a.brand-logo {
             position: relative;
             border-radius: 0 0 5px 5px;
             top: 0;
+            .is-typing {
+                position: relative;
+            }
+            button {
+                top: initial;
+                bottom: 0;
+            }
         }
         #chat-top {
             margin-top: 0;
             border-radius: 5px 5px 0 0;
         }
+    }
+    #play #chat .chat-list {
+        min-height: 385px;
+        max-height: 40vh;
     }
 }
 
