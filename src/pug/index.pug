@@ -3,6 +3,7 @@ extends template/layout
 block content
   include template/nav
   include template/modals
+  include template/popin
   main
     #homepage.section.no-pad-bot
       .container#info
@@ -12,6 +13,7 @@ block content
         .row.center.login-div
           a.modal-trigger.btn-large.waves-effect.waves-light.teal-accent-4(href='#login') Login
           a.modal-trigger.btn-large.waves-effect.waves-light.teal-accent-4(href='#register') Register
+          //- a.modal-trigger.btn-large.waves-effect.waves-light.teal-accent-4(href='/play/lobby') Play
         .divider
         .row.no-marg-bot.marg-top
           .col.s12.m6

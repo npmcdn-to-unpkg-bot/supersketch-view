@@ -1,4 +1,11 @@
 $(document).ready(function() {
+    var sysMsg = document.getElementById("message")
+    if (sysMsg) {
+        $('#close-message').click(function(e) {
+            e.preventDefault();
+            sysMsg.style.display = "none";
+        })
+    }
     // Set up hamburger
     var $hamburger = $(".hamburger");
     $hamburger.click(function(e) {

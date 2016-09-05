@@ -13,7 +13,8 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
-  background-image: url("/imgs/seigaiha.png"); }
+  background-image: url("/imgs/seigaiha.png");
+  position: relative; }
 
 main {
   flex: 1 0 auto; }
@@ -38,6 +39,19 @@ main {
   padding-top: 4em; }
   #info-lobby .create-room {
     margin-top: 1em; }
+
+#message {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 64px;
+  text-align: center; }
+  #message .card.horizontal {
+    display: inline-block; }
+    #message .card.horizontal .card-content {
+      padding: 1em; }
+    #message .card.horizontal i {
+      margin-left: 1em; }
 
 #word {
   margin: 4em 0 2em 0;
