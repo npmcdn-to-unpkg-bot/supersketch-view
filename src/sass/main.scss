@@ -141,16 +141,16 @@ main {
         padding: 10px 5px 10px 10px;
     }
 
-    #game-wrapper {
-        padding-left: 1em;
-    }
     #player-wrapper {
         padding: 1em;
     }
 
-    #game-canvas {
-        border-radius: 5px;
+    #game {
         min-height: 50vh;
+    }
+
+    .canvas-container {
+        margin: auto;
     }
 
     #chat {
@@ -479,8 +479,8 @@ a.brand-logo {
         width: 420px;
     }
 
-    #play #game-canvas {
-        min-height: 512px;
+    #play #game {
+        min-height: 50vh;
     }
 
     #play #player-list {

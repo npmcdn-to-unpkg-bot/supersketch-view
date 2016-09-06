@@ -114,15 +114,14 @@ main {
 #play #player-list {
   padding: 10px 5px 10px 10px; }
 
-#play #game-wrapper {
-  padding-left: 1em; }
-
 #play #player-wrapper {
   padding: 1em; }
 
-#play #game-canvas {
-  border-radius: 5px;
+#play #game {
   min-height: 50vh; }
+
+#play .canvas-container {
+  margin: auto; }
 
 #play #chat .row {
   margin-bottom: 0; }
@@ -363,8 +362,8 @@ a.brand-logo {
       line-height: 64px; }
   #login.modal, #register.modal, #create.modal {
     width: 420px; }
-  #play #game-canvas {
-    min-height: 512px; }
+  #play #game {
+    min-height: 50vh; }
   #play #player-list {
     padding: 10px; }
     #play #player-list ul.collection {
