@@ -117,6 +117,9 @@ main {
 #play #player-wrapper {
   padding: 1em; }
 
+#play #game {
+  min-height: 300px; }
+
 #play .canvas-container {
   margin: auto; }
 

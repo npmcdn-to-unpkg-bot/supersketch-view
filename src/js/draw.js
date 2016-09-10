@@ -11,16 +11,23 @@ var waitForFinalEvent = (function() {
   };
 })();
 
-var getCanvasSize = function(windowWidth) {
-    if (windowWidth <= 600) {
+var getCanvasSize = function(width) {
+    if (width <= 600) {
         return {
-            width: windowWidth,
-            height: windowWidth / 1.2
+            width: width,
+            height: width / 1.20000
+        }
+    } else if (width <= 960) {
+        return {
+            width: width,
+            height: width / 1.66666
         }
     } else {
+        // Scroll bar width not being accounted for in container.width() call...
+        // If the arbitrary -10 width didn't exist, the canvas would exceed the padding due to scroll bar
         return {
-            width: windowWidth,
-            height: windowWidth / 1.666
+            width: width - 10,
+            height: width / 1.66666
         }
     }
 }
@@ -30,24 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     var lineArray = [];
     var groupLines = new fabric.Group();
-    var calcRatio = function (width, height) {
-        // if (width > (height * 1.777777)) {
-        //     return {
-        //         width: height * 1.777777,
-        //         height: height
-        //     }
-        // } else {
-        //     return {
-        //         width: width,
-        //         height: height
-        //     }
-        // }
-        return {
-            width: width,
-            height: height
-        }
-    }
-    var newWidthHeight = getCanvasSize(container.outerWidth() - 25);
+    var newWidthHeight = getCanvasSize(container.width());
     var canvas = new fabric.Canvas('drawing', {
         width: newWidthHeight.width,
         height: newWidthHeight.height,
@@ -97,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // Do stuff here 500 ms delay afterwards
             // console.log($(window).outerWidth() + " " + $(window).outerHeight());
             console.log(container.width() + " " + container.outerWidth());
-            newWidthHeight = getCanvasSize(container.outerWidth() - 25);
+            newWidthHeight = getCanvasSize(container.width());
             var zoomFactorWidth = newWidthHeight.width / canvas.getWidth();
             var zoomFactorHeight = newWidthHeight.height / canvas.getHeight();
             zoomResize(zoomFactorWidth, zoomFactorHeight);
