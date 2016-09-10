@@ -117,9 +117,6 @@ main {
 #play #player-wrapper {
   padding: 1em; }
 
-#play #game {
-  min-height: 50vh; }
-
 #play .canvas-container {
   margin: auto; }
 
@@ -362,8 +359,6 @@ a.brand-logo {
       line-height: 64px; }
   #login.modal, #register.modal, #create.modal {
     width: 420px; }
-  #play #game {
-    min-height: 50vh; }
   #play #player-list {
     padding: 10px; }
     #play #player-list ul.collection {
